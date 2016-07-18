@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using WebPhoneBook.Models;
+using DataAccess.Repository;
 
 namespace WebPhoneBook.Controllers
 {
@@ -18,6 +19,8 @@ namespace WebPhoneBook.Controllers
 
         public ManageController()
         {
+            //string path = this.Server.MapPath("/App_Data");
+            //UserRepository repo = new UserRepository(path + "users.txt");
         }
 
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)

@@ -67,3 +67,5 @@ C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\WebPhone
 C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\WebPhoneBook\obj\Debug\WebPhoneBook.csprojResolveAssemblyReference.cache
 C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\WebPhoneBook\obj\Debug\WebPhoneBook.dll
 C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\WebPhoneBook\obj\Debug\WebPhoneBook.pdb
+C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\WebPhoneBook\bin\DataAccess.dll
+C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\WebPhoneBook\bin\DataAccess.pdb

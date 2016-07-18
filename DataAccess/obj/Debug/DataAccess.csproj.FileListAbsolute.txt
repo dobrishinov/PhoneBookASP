@@ -1,0 +1,5 @@
+C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Dobrishinov\Documents\Visual Studio 2015\Projects\WebPhoneBook\DataAccess\obj\Debug\DataAccess.pdb

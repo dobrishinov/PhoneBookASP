@@ -1,4 +1,5 @@
-﻿using System;
+﻿using WebPhoneBook.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,18 +14,36 @@ namespace WebPhoneBook.Controllers
             return View();
         }
 
-        public ActionResult About()
+        [HttpGet]
+        public ActionResult Login()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        public ActionResult Login(string username, string password)
         {
-            ViewBag.Message = "Your contact page.";
+            AuthenticationManager.Authenticate(username, password);
 
-            return View();
+            if (AuthenticationManager.LoggedUser == null)
+            {
+                ModelState.AddModelError("authenticationFailed", "Wrong username or password!");
+                ViewData["username"] = username;
+
+                return View();
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult Logout()
+        {
+            if (AuthenticationManager.LoggedUser == null)
+                return RedirectToAction("Login", "Home");
+
+            AuthenticationManager.Logout();
+
+            return RedirectToAction("Login", "Home");
         }
     }
 }
