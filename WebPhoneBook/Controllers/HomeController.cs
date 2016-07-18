@@ -39,10 +39,12 @@ namespace WebPhoneBook.Controllers
         public ActionResult Logout()
         {
             if (AuthenticationManager.LoggedUser == null)
+            {
                 return RedirectToAction("Login", "Home");
+            }
 
             AuthenticationManager.Logout();
-
+            
             return RedirectToAction("Login", "Home");
         }
     }

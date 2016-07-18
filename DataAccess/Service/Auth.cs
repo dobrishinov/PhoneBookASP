@@ -10,9 +10,9 @@
 
     public class Auth
     {
-        public static UserEntity LoggedUser { get; private set; }
+        public UserEntity LoggedUser { get; private set; }
 
-        public static void AuthenticateUser(string username, string password)
+        public void AuthenticateUser(string username, string password)
         {
             UserRepository userRepository = RepositoryFactory.GetUsersRepository();
             LoggedUser = userRepository.GetByUsernameAndPassword(username, password);

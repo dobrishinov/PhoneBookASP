@@ -19,7 +19,7 @@
                     HttpContext.Current.Session["LoggedUser"] = new Auth();
 
                 auth = (Auth)HttpContext.Current.Session["LoggedUser"];
-                return Auth.LoggedUser;
+                return auth.LoggedUser;
             }
         }
 
@@ -31,7 +31,7 @@
                 HttpContext.Current.Session["LoggedUser"] = new Auth();
 
             authenticationService = (Auth)HttpContext.Current.Session["LoggedUser"];
-            Auth.AuthenticateUser(username, password);
+            authenticationService.AuthenticateUser(username, password);
         }
         public static void Logout()
         {
