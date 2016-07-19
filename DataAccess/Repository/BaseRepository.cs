@@ -69,7 +69,7 @@
 
         private void Update(T item)
         {
-            string pathToTemp = "team." + pathToFile;
+            string pathToTemp = pathToFile + ".temp";
 
             FileStream ifs = new FileStream(pathToFile, FileMode.OpenOrCreate);
             StreamReader sr = new StreamReader(ifs);
@@ -167,7 +167,7 @@
 
         public void Delete(T item)
         {
-            string pathToTemp = "temp." + pathToFile;
+            string pathToTemp = pathToFile + ".temp";
 
             FileStream ifs = new FileStream(pathToFile, FileMode.OpenOrCreate);
             StreamReader sr = new StreamReader(ifs);
