@@ -213,6 +213,9 @@
     <Content Include="Views\ContactsManager\Index.cshtml" />
     <Content Include="Views\UsersManager\index.cshtml" />
     <Content Include="Views\UsersManager\EditUser.cshtml" />
+    <Content Include="Views\ContactsManager\EditContact.cshtml" />
+    <Content Include="Views\ContactsManager\ContactDetails.cshtml" />
+    <Content Include="Views\PhonesManager\EditPhone.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -33,10 +33,13 @@ namespace PhoneBook.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult EditPhone(PhoneEntity phone)
+        public ActionResult EditPhone()
         {
             if (AuthenticationManager.LoggedUser == null)
                 return RedirectToAction("Login", "Home");
+
+            PhoneEntity phone = new PhoneEntity();
+            TryUpdateModel(phone);
 
             PhoneRepository phonesRepository = RepositoryFactory.GetPhonesRepository();
             phonesRepository.Save(phone);

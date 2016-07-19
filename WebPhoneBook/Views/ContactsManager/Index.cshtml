@@ -1,36 +1,41 @@
 ﻿@using  DataAccess.Entity;
 
-@model IEnumerable<DataAccess.Repository.UserRepository>
-
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Contacts Manager";
 }
 
-<h2>Index</h2>
+<h2>Manage Contacts</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "EditContact", "ContactsManager")
 </p>
 <table class="table">
     <tr>
         <td>ID</td>
-        <td>UserId</td>
+        <td>Full Name</td>
         <td>Email</td>
-        <td>FullName</td>
+        <td>Action</td>
     </tr>
 @foreach (var item in (List<ContactEntity>)ViewData["contacts"]) {
+
+    var details = "/ContactsManager/ContactDetails?id=" + item.Id;
+    var edit = "/ContactsManager/EditContact?id=" + item.Id;
+    var delete = "/ContactsManager/DeleteContact?id=" + item.Id;
+
     <tr>
         <td>
             @item.Id
         </td>
         <td>
-            @item.UserId
+            @item.FullName
         </td>
         <td>
             @item.Email
         </td>
         <td>
-            @item.FullName
+            <a href="@details">Details</a> |
+            <a href="@edit">Edit</a> |
+            <a href="@delete">Delete</a>
         </td>
     </tr>
 }
